@@ -1,0 +1,11 @@
+<li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="{{ .Permalink }}" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">{{ .Title }}</h4>
+          {{ range $tag := .Params.tags }}
+            <span class="big post-tags">{{ $tag }}</span>
+          {{ end }}
+
+    </a>
+    <span class="small post-date-overivew">{{ dateFormat (default "2006-01-02" .Site.Params.dateFormat) .Date }}</span>
+    <span class="big post-date-overivew">{{ dateFormat (default "Jan 2, 2006" .Site.Params.dateFormat) .Date }}</span>
+</li>
